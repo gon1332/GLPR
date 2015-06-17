@@ -34,3 +34,5 @@ CMakeCache.txt
 
 # Output
 output.txt
+1_text_isolation/*.png
+2_character_segmentation/*.png
