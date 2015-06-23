@@ -16,8 +16,21 @@ rm -f output.txt
 rm final.png
 for i in letter*.png;
 do
-    ./3_ocr/ocr.out $i | grep '[Α-Ωα-ω0-9]' | perl -p -e 's/[^Α-Ω0-9]+//g' >> output.txt
+    if [ "$i" \< "letter04.png" ]
+    then
+        tesseract $i outbase -l ell -psm 10 > /dev/null 2>&1
+    else
+        tesseract $i outbase -l eng -psm 10 > /dev/null 2>&1
+    fi
+    head outbase.txt >> output.txt
     rm $i
 done
 
+cp output.txt tmp.txt
+cat /dev/null > output.txt
+cat tmp.txt | perl -p -e 's/[^Α-Ω0-9]+//g' >> output.txt
+head output.txt
+
+rm outbase.txt
+rm tmp.txt
 exit $SUCCESS
