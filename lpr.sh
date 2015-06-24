@@ -20,7 +20,7 @@ do
     then
         tesseract $i outbase -l ell -psm 10 > /dev/null 2>&1
     else
-        tesseract $i outbase -l eng -psm 10 > /dev/null 2>&1
+        tesseract $i outbase -l eng -psm 6 > /dev/null 2>&1
     fi
     head outbase.txt >> output.txt
     rm $i
