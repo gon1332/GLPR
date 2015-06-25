@@ -31,6 +31,8 @@
 CMakeFiles/
 cmake_install.cmake
 CMakeCache.txt
+1_text_isolation/Makefile
+2_character_segmentation/Makefile
 
 # Output
 output.txt
