@@ -16,7 +16,6 @@ rm -f output.txt
 rm final.png
 for i in letter*.png;
 do
-    
     ./3_ocr/ocr.out $i | grep '[Α-Ω0-9]' | perl -p -e 's/[^Α-Ω0-9]+//g' >> output.txt 
     rm $i
 done
