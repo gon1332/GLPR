@@ -351,11 +351,13 @@ void CannyThreshold(int, void*) {
 	}
 #endif
 
+#ifdef WINDOWDEBUG
 	targetROI = outputImage(Rect(outputCanny.size().width, 0, outputCanny.size().width, outputCanny.size().height));	/// Change Reference to the right image
 	drawing.copyTo(targetROI);
 
 	imshow(WINDOWNAME, outputImage);
 	moveWindow(WINDOWNAME, 0, 0);
+#endif
 }
 
 
