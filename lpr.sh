@@ -24,6 +24,7 @@ echo "\n\033[0;31m$(tput bold)TODO\033[0m:$(tput sgr0) 0_locateLP produces possi
 echo "Need to verify that code $(tput bold)WILL$(tput sgr0) work for many iterations."
 echo "\033[1;33m$(tput bold)This is a warning!$(tput sgr0)\033[0m"
 echo "\033[1;37m$(tput bold)Exiting now!$(tput sgr0)\033[0m"
+return
 
 echo "-------------------------------"
 echo "Greek License Plate: "
