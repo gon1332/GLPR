@@ -1,0 +1,5 @@
+   Compiling ../../../src/test.cpp in debug mode
+   Compiling ../../../src/hls_filters.cpp in debug mode
+   Compiling ../../../src/image_filter.cpp in debug mode
+   Generating csim.exe
+@I [SIM-1] CSim done with 0 errors.
