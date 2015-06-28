@@ -28,7 +28,9 @@ int main(int argc, char *argv[])
     std::ofstream output;
     output.open("output.txt");
     std::vector<Pix *>::iterator it;
-    for (it = letter_imgs.begin(); it != letter_imgs.end(); ++it)
+
+#pragma omp parallel for
+    for (it = letter_imgs.begin(); it < letter_imgs.end(); ++it)
     {
         api->SetImage(*it);
         // Get OCR result

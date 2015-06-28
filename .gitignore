@@ -31,11 +31,13 @@
 CMakeFiles/
 cmake_install.cmake
 CMakeCache.txt
+0_locateLP/Makefile
 1_text_isolation/Makefile
 2_character_segmentation/Makefile
 
 # Output
 output.txt
+0_locateLP/*.png
 1_text_isolation/*.png
 2_character_segmentation/*.png
 
