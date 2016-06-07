@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8)
+project(LPR)
+add_subdirectory("0_locate_lp")
+add_subdirectory("1_text_isolation")
+add_subdirectory("2_morphology_normalization")
+add_subdirectory("3_character_segmentation")
+add_subdirectory("4_ocr")
