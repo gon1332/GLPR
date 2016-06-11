@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     }
 
     std::ofstream output;
-    output.open("output/output.txt");
+    output.open("/tmp/glpr-output/output.txt");
 
 
 #ifdef ONEPIECE

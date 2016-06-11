@@ -138,7 +138,7 @@ int main(int argc, char *argv[])
     ///////////////////////////////////////////////////////////////////////////
     // Write the final image.
     ///////////////////////////////////////////////////////////////////////////
-    imwrite("output/cleanIm.jpg", contourRegion);
+    imwrite("/tmp/glpr-output/cleanIm.jpg", contourRegion);
 
 
     return 0;

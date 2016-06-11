@@ -135,7 +135,7 @@ int main( int argc, char** argv )
 	        image.copyTo(imageROI, mask); // 'image' is the image you used to compute the contours.
 	        croppedImage = imageROI(roi);
 
-			imwrite("output/letter"+std::to_string(imgID)+".jpg", croppedImage);
+			imwrite("/tmp/glpr-output/letter"+std::to_string(imgID)+".jpg", croppedImage);
 			imgID++;
 			letter_start=0;
 			letter_end=0;

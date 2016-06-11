@@ -63,7 +63,7 @@ int main( int, char** argv )
     erode( dilation_dst, erosion_dst, element2 );
     // imshow("Erosion Image", erosion_dst);
     // waitKey();
-    imwrite("output/pic1.jpg", erosion_dst);
+    imwrite("/tmp/glpr-output/pic1.jpg", erosion_dst);
 
 
   return 0;

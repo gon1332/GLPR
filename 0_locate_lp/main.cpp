@@ -40,7 +40,7 @@ int main( int argc, char** argv ) {
     Mat croppedImage = src(myROI);
 
 #ifdef DEBUG
-    imwrite("output/1_low_half.jpg", croppedImage);
+    imwrite("/tmp/glpr-output/1_low_half.jpg", croppedImage);
 #endif
 
     cvtColor(croppedImage, greyIm, COLOR_BGR2GRAY);
@@ -57,7 +57,7 @@ int main( int argc, char** argv ) {
     equalizeHist( greyIm, histeqIm );
 
 #ifdef DEBUG
-    imwrite("output/3_hist_eq.jpg", histeqIm);
+    imwrite("/tmp/glpr-output/3_hist_eq.jpg", histeqIm);
 #endif
 
 
@@ -69,7 +69,7 @@ int main( int argc, char** argv ) {
     blur(histeqIm, blurIm, Size(3,3));
 
 #ifdef DEBUG
-    imwrite("output/4_blur.jpg", blurIm);
+    imwrite("/tmp/glpr-output/4_blur.jpg", blurIm);
 #endif
 
     // Canny detector
@@ -77,7 +77,7 @@ int main( int argc, char** argv ) {
     Canny(blurIm, edgesIm, thresh, thresh*ratio, kernel_size);
 
 #ifdef DEBUG
-    imwrite("output/5_edge.jpg", edgesIm);
+    imwrite("/tmp/glpr-output/5_edge.jpg", edgesIm);
 #endif
 
     // Find contours
@@ -109,7 +109,7 @@ int main( int argc, char** argv ) {
 
         Rect roi = boundRect[i];
         piece[j] = croppedImage(roi);
-        imwrite("output/contour" + std::to_string(j) + ".jpg", piece[j]);
+        imwrite("/tmp/glpr-output/contour" + std::to_string(j) + ".jpg", piece[j]);
         j++;
 
         /*Mat tmp_gray;
@@ -124,7 +124,7 @@ int main( int argc, char** argv ) {
         //circle(drawing, center[i], (int)radius[i], color, 2, 8, 0);
     }
 
-    imwrite("output/6_contours.jpg", drawing);
+    imwrite("/tpm/glpr-output/6_contours.jpg", drawing);
 
 	return 0;
 }
