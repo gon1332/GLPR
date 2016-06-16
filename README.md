@@ -18,5 +18,13 @@ LPR
 
 Usage:
 ```
-./lpr.sh input/images/car4.jpg
+./scripts/lpr.sh input/images/car4.jpg
+```
+
+Petarlinux Project
+-----------------
+Compile for the Petalinux Project:
+```
+./scripts/arm-xcompile.sh
+
 ```
