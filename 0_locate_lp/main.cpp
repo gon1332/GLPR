@@ -51,7 +51,7 @@ int main( int argc, char** argv ) {
 
 
 #ifdef DEBUG
-    imwrite("output/2_grey_scale.jpg", greyIm);
+    imwrite("/tmp/glpr-output/2_grey_scale.jpg", greyIm);
 #endif
 
     equalizeHist( greyIm, histeqIm );
@@ -124,7 +124,7 @@ int main( int argc, char** argv ) {
         //circle(drawing, center[i], (int)radius[i], color, 2, 8, 0);
     }
 
-    imwrite("/tpm/glpr-output/6_contours.jpg", drawing);
+    imwrite("/tmp/glpr-output/6_contours.jpg", drawing);
 
 	return 0;
 }

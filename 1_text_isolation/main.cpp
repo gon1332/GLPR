@@ -33,7 +33,9 @@ int main(int argc, char *argv[])
 
     char *imageName = argv[1];
 
+#ifdef DEBUG
     cv::namedWindow(window_name, CV_WINDOW_AUTOSIZE);
+#endif
 
     cv::Mat dst;
     cv::Mat src = cv::imread(imageName, 1);
